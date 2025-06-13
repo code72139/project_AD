@@ -1,0 +1,209 @@
+/* Variables de colores pastel */
+:root {
+    --primary: #FFB3BA;
+    --secondary: #BAFFC9;
+    --accent: #0627fe;
+    --background: linear-gradient(45deg, #ffffff, #ecee928c, #ffffff);
+    --text: #4A4A4A;
+    --nav-bg: rgba(255, 255, 255, 0.363);
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--background);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary);
+    text-shadow: 1px 1px 0 #00000076;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+/* Párrafos y texto */
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary);
+    text-shadow: 1px 1px 0 #00000076;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Listas */
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Formularios */
+input, textarea, select {
+    padding: 0.5rem;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent);
+}
+
+
+/* Contenedores */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header y Navegación */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--nav-bg);
+    padding: 0.3rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--primary);
+    text-shadow: 1px 1px 0 #00000076;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0.3rem 0;
+    padding: 0;
+}
+
+header nav a {
+    color: var(--accent);
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+header nav a:hover {
+    background: var(--primary);
+    color: white;
+    text-shadow: none;
+}
+
+/* Contenido principal */
+main {
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Atractivos */
+.atractivo {
+    background: var(--nav-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.atractivo h3 {
+    color: var(--primary);
+    text-shadow: 1px 1px 0 #00000076;
+    margin-top: 0;
+}
+
+/* Comentarios */
+.comentarios {
+    margin-top: 1.5rem;
+}
+
+.comentarios h4 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.comentarios-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.comentario-formulario {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nuevo-comentario {
+    flex: 1;
+    padding: 0.5rem;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    margin: 0;
+}
+
+/* Botones */
+.btn-favorito, .btn-comentar {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-favorito:hover, .btn-comentar:hover {
+    background-color: var(--accent);
+}

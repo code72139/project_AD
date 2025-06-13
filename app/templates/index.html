@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atractivos Turísticos</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Atractivos Turísticos</h1>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('index') }}">Inicio</a></li>
+          <li>
+            <a href="{{ url_for('favorito.vista_favoritos') }}">Favoritos</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="atractivos-lista">
+        <!-- Atractivos se cargarán aquí -->
+      </section>
+    </main>
+
+    <template id="atractivo-template">
+      <article class="atractivo">
+        <h3></h3>
+        <p></p>
+        <button class="btn-favorito">Agregar a Favoritos</button>
+
+        <section class="comentarios">
+          <h4>Comentarios</h4>
+
+          <ul class="comentarios-lista">
+            <!-- Comentarios se cargarán aquí -->
+          </ul>
+
+          <form class="comentario-formulario">
+            <input
+              type="text"
+              class="nuevo-comentario"
+              placeholder="Escribe un comentario..."
+              required
+            />
+            <button type="submit" class="btn-comentar">Comentar</button>
+          </form>
+        </section>
+      </article>
+    </template>
+  </body>
+</html>
